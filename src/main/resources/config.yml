@@ -1,0 +1,106 @@
+# MySQL Configuration
+Database:
+  host: "localhost"
+  port: 3306
+  database: "BasicEssentials"
+  username: "root"
+  password: ""
+# Rank Configuration
+RankP: "basicessentials.rankhelp"
+RankHelpMessage:
+  - "&c&m-------------------"
+  - "&c&lRank Help Menu"
+  - ""
+  - "&7/rank create name prefix weight" # Create new rank
+  - "&7/rank delete name" # Delete a rank
+  - "&7/rank rename rank newname" # Rename a rank
+  - "&7/rank setprefix rank newprefix" # Set the prefix or rename the prefix of a rank
+  - "&7/rank setweight rank 1-100(Higher Is Better)" # Set the weight of the ranks
+  - "&7/rank addperm rank permission.node" # Add a permission to a rank
+  - "&7/rank delperm rank permission.node" # Remove a permission from a rank
+  - ""
+  - "&7/setrank rank player" # Give a player a rank
+  - "&7/rankinfo player" # Show a users ranks and permissions
+  - "&7/addperm player permission.node" # Gives a player a permission
+  - "&7/removeperm player permission.node" # Removes a permission from the player
+  - "&c&m-------------------"
+RankExists: "&cRank already exists."
+RankNotExist: "&cRank does not exist."
+DeleteDefault: "&cYou are unable to remove the default rank."
+RenameDefault: "&cYou cannot rename the default rank."
+RenamePrefix: "&aSucessfully &crenamed the prefix."
+SetWeight: "&aSucessfully &cupdated the weight."
+# Chat format
+Chat-Format: "%rank% %name%: %message%"
+# Misc
+Args: "&cTo many argument supplied."
+NoPerm: "&cNo permission." # May be outdated
+UserNotOnline: "&cUser isn't online."
+UserNeverJoined: "&cThe user supplied has never joined the server."
+NotPlayer: "Looking kinda consolie there buddie"
+# Spawn Configuration
+SpawnPermission: "basicessentials.spawn"
+SetSpawnPermission: "basicessentials.spawn"
+Spawn:
+  SetSpawn: "&cYou have set the spawn location."
+  TPSpawn: "&cTeleporting you to spawn."
+  World: "World"
+  X: -340
+  Y: 89
+  Z: 45
+# Join / Leaving Configuration
+WelcomerEnabled: True
+WelcomeMessage: #To add another line simply add line6: "text" etc to the end.
+  - "&c&m-------------------"
+  - ""
+  - "&cWelcome &l{player}&f&c!"
+  - ""
+  - "&c&m-------------------"
+AnnounceWelcomes: True
+WelcomeAnnouncements:
+  - "&c&m-------------------"
+  - "&c&lAnnouncement"
+  - "&cWelcome &l{player}&f&c!"
+  - ""
+  - "&c&m-------------------"
+LeaveMessage: "&cBye &f{player}."
+# Gamemode Messages
+gmcm: "&cYou have changed to creative."
+gmsm: "&cYou have changed to survival."
+gmam: "&cYou have changed to adventure."
+gmspecm: "&cYou have changed to spectator."
+gmp: "basicessentials.gamemode"
+gamemodehelp: # Doesnt currently support adding new lines
+  - "&c&m-------------------"
+  - "&c&lGamemode Help"
+  - "&7/gamemode <creative> <player>"
+  - "&7/gamemode <survival> <player>"
+  - "&7/gamemode <adventure> <player>"
+  - "&7/gamemode <spectator> <player>"
+  - ""
+  - "&c&m-------------------"
+# Fly Config
+flyp: "basicessentials.fly"
+flyym: "&cYou have &aactivated &cfly."
+flynm: "&cYou have &cdisabled &cfly."
+# Heal Config
+healps: "basicessentials.healself"
+healpo: "basicessentials.healothers"
+healm: "&cYou have been &ahealed."
+# Kill Config
+killps: "basicessentials.killself"
+killpo: "basicessentials.killothers"
+killselfm: "&cYou have been died."
+killotherm: "&cYou have killed {player}."
+# Afk Config
+afkp: "basicessentials.afk"
+afkmy: "&cYou are now AFK."
+afkmn: "&cYou are no longer AFK."
+afka: True # Toggle AFK announcement messages
+# Fun Config
+beginfun: "&cLet the fun begin!"
+funp: "basicessentials.fun"
+# Messaging Config
+msgp: "basicessentials.msg"
+replyp: "basicessentials.reply"
+msgrecieve: "&c{player} &7-> &c{recievemessage}"
