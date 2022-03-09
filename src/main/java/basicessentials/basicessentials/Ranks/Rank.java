@@ -32,7 +32,6 @@ public class Rank implements CommandExecutor {
                             } else if (args.length > 4) { // To many args supplied
                                 ChatUtils.Args(player);
                             } else { // Correct args supplied
-                                // /rank0 create1 rank2 prefix3
                                 String rankname = args[1];
                                 String rankprefix = args[2];
                                 try {
@@ -94,7 +93,6 @@ public class Rank implements CommandExecutor {
                                 ChatUtils.Args(player);
                             }
                         } else if (args[0].equalsIgnoreCase("setprefix")) {
-                            // /rank setprefix0 rank1 newprefix2
                             if (args.length > 3) {
                                 ChatUtils.Args(player);
                             } else if (args.length <= 2) {

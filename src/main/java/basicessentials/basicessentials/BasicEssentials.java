@@ -36,9 +36,6 @@ public final class BasicEssentials extends JavaPlugin {
     public static ArrayList<Player> afk = new ArrayList<Player>(); // We store whether the player is AFK in the array list
     public static HashMap<Player, OfflinePlayer> recentmessage = new HashMap<>(); // Storing Replys and Messages
 
-    // MySQL
-
-    private static Connection connection;
     @Override
     public void onEnable() {
         instance = this;

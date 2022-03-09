@@ -12,6 +12,7 @@ public class SQLUtils {
     public static String host, database, username, password;
     public static int port;
     public static Connection connection;
+    
     public static void InitialiseSQL() {
         host = BasicEssentials.getInstance().getConfig().getString("Database.host");
         port = BasicEssentials.getInstance().getConfig().getInt("Database.port");
@@ -23,6 +24,8 @@ public class SQLUtils {
             String pinfo = "CREATE TABLE IF NOT EXISTS pinfo(uuid varchar(64) NOT NULL, firstjoindate datetime  NOT NULL, lastjoindate datetime  NOT NULL, rank text NOT NULL, rankperm boolean NOT NULL, rankexpirytime datetime, rankreason text DEFAULT 'N/A', rankbefore text NOT NULL DEFAULT 'DEFAULT') engine=InnoDB;";
             String ranks = "CREATE TABLE IF NOT EXISTS ranks(name varchar(100) NOT NULL,prefix text NOT NULL,weight int NOT NULL,permissions longtext) engine=InnoDB;";
             try {
+                SQLUtils.PrepNom(pinfo);
+                SQLUtils.PrepNom(ranks);
                 String s = "SELECT * FROM `ranks` WHERE name = 'DEFAULT';";
                 ResultSet rs = preparedStatement(s).executeQuery();
                 if (!rs.next()) { // Create default rank if it doesn't exist
@@ -40,6 +43,7 @@ public class SQLUtils {
     public static PreparedStatement preparedStatement(String query) {
         PreparedStatement ps = null;
         try {
+            String query2 = query.replace("`", "").replace("(", "").replace(")", "");
             ps = SQLUtils.connection.prepareStatement(query);
         } catch (SQLException e) {
             e.printStackTrace();
