@@ -1,5 +1,6 @@
 package basicessentials.basicessentials;
 
+import basicessentials.basicessentials.Ranks.SubCommands.Rankinfo;
 import basicessentials.basicessentials.Utils.SQLUtils;
 import basicessentials.basicessentials.Commands.Gamemode.Gamemode;
 import basicessentials.basicessentials.Commands.Messaging.Message;
@@ -61,6 +62,7 @@ public final class BasicEssentials extends JavaPlugin {
         getCommand("reply").setExecutor(new Reply());
         getCommand("setspawn").setExecutor(new SetSpawn());
         getCommand("spawn").setExecutor(new Spawn());
+        getCommand("rankinfo").setExecutor(new Rankinfo());
 
         System.out.println("----------------------");
         System.out.println("LIGHT ESSENTIALS");

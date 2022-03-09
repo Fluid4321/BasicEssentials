@@ -106,3 +106,5 @@ funp: "basicessentials.fun"
 msgp: "basicessentials.msg"
 replyp: "basicessentials.reply"
 msgrecieve: "&c{player} &7-> &c{recievemessage}"
+# Rank Info Config
+rankinfoperm: "basicessentials.rankinfo"

@@ -51,7 +51,14 @@ public class SQLUtils {
         return ps;
     }
 
-
+    public static ResultSet ExecuteResultStatement(String statement) {
+        try {
+            PreparedStatement stmt = connection.prepareStatement(statement);
+            ResultSet results = stmt.executeQuery();
+            return results;
+        } catch (SQLException e) {e.printStackTrace();}
+        return null;
+    }
 
 
     private static void openConnection() throws SQLException {
