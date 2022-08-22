@@ -4,7 +4,7 @@ main: basicessentials.basicessentials.BasicEssentials
 api-version: 1.17
 authors: [ Fluid4321 ]
 description: A lightweight version of essentials featuring command shorterners, permissions, messaging systems and more.
-website: https://github.com/wb51182/
+website: https://github.com/fluid4321/
 commands:
   gamemode:
   fly:
